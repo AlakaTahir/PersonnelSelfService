@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\PersonnelSelfService.API.csproj": {}
+    "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\PersonnelSelfService.API.csproj": {
+    "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\PersonnelSelfService.API.csproj",
-        "projectName": "PersonnelSelfService.API",
-        "projectPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\PersonnelSelfService.API.csproj",
+        "projectUniqueName": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj",
+        "projectName": "PersonnelSelfService.Migrations",
+        "projectPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj",
         "packagesPath": "C:\\Users\\CORE I5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\obj\\",
+        "outputPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -27,7 +27,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,9 +49,11 @@
               "target": "Package",
               "version": "[3.1.10, )"
             },
-            "Microsoft.EntityFrameworkCore.UnitOfWork": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.10, )"
             }
           },
           "imports": [
@@ -67,9 +68,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

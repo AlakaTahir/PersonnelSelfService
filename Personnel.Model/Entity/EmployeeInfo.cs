@@ -12,7 +12,7 @@ namespace Personnel.Model.Entity
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string CreatedBy { get; set; }
-        public string DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string Department { get; set; }
         public string Unit { get; set; }
         public string GradeLevel { get; set; }

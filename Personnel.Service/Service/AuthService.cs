@@ -21,7 +21,8 @@ namespace Personnel.Service.Service
             _employeeservice = employeeservice;
         }
 
-        public async Task<(bool status, string message)> Register(string firstName, string lastName, string phonenumber, string email, string employeeId)                   
+        //How do we know the HR that creates an employee?
+        public async Task<(bool status, string message)> Register(string firstName, string lastName, string phonenumber, string email, string employeeId, string password, string createdby)                   
         {
             //check for existing user
             var checkuser = (email != null) ? await _userManager.FindByEmailAsync(email) : await _userManager.FindByNameAsync(employeeId);
@@ -29,14 +30,14 @@ namespace Personnel.Service.Service
             {
                 return (false, "emloyee already exist, try another");
             }
-            var user = new AppIdentityUser { Email = email, UserName = employeeId, LastName = lastName, FirstName = firstName };
+            var user = new AppIdentityUser { Email = email, UserName = employeeId, LastName = lastName, FirstName = firstName,  };
 
             //Create user
-            var result = await _userManager.CreateAsync(user);
+            var result = await _userManager.CreateAsync(user, password);
             if (result.Succeeded)
             {
                 //save the domain user into the user table                  
-                var employeeModel = new EmployeeInformationRequestModel { FirstName = firstName, LastName = lastName, Email = email, CreatedDate = DateTime.Now,};
+                var employeeModel = new EmployeeInformationRequestModel { FirstName = firstName, LastName = lastName, Email = email, CreatedDate = DateTime.Now,CreatedBy = createdby};
 
                 var userdata = await _employeeservice.Create(employeeModel);
                 if (userdata.Status)
@@ -47,16 +48,6 @@ namespace Personnel.Service.Service
                 return (false, "Unable to complete the registration. Please try again");
             }
             return (false, "Unable to complete the registration. Please try again");
-
-
         }
-
-
-
-
-
-
-
-
     }
 }
