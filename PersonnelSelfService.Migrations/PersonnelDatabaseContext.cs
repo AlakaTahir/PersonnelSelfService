@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PersonnelSelfService.Migrations
 {
-    internal class PersonnelDatabaseContext
+    public class PersonnelDatabaseContext
     {
     }
 }

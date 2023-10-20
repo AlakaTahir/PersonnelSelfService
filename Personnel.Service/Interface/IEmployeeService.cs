@@ -10,5 +10,6 @@ namespace Personnel.Service.Interface
     public  interface IEmployeeService
     {
         Task<BaseResponseModel> Create(EmployeeInformationRequestModel model);
+        
     }
 }

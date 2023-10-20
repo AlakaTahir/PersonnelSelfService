@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personnel.Service", "Person
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSelfService.API", "PersonnelSelfService.API\PersonnelSelfService.API.csproj", "{E297DD1C-6B50-4A8F-9228-B50F06018167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSelfService.Migrations", "PersonnelSelfService.Migrations\PersonnelSelfService.Migrations.csproj", "{FCE8FEDE-5D24-497B-8544-9E30148D8162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E297DD1C-6B50-4A8F-9228-B50F06018167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E297DD1C-6B50-4A8F-9228-B50F06018167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E297DD1C-6B50-4A8F-9228-B50F06018167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
