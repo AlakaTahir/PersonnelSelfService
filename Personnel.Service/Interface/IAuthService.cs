@@ -7,7 +7,7 @@ namespace Personnel.Service.Interface
 {
     public interface IAuthService
     {
-        Task<(bool status, string message)> Register(string firstName, string lastName, string phonenumber, string email, string employeeId);
+        Task<(bool status, string message)> Register(string firstName, string lastName, string phonenumber, string email, string employeeId, string password, string createdby);
         
             
         

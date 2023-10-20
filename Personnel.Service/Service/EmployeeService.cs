@@ -20,6 +20,9 @@ namespace Personnel.Service.Service
         {
             _unitOfWork = unitOfWork;
         }
+        //1 - why do we need many properties on the EmployeeInformationRequestModel if we are making use of just 4 of them?
+        //2 - why is DateOfBirth string on the EmployeeInfo?
+        //3 - EmployeeId can be string instead of int on the EmployeeInfo considering for a company using this forma "DELT001"
         public async Task<BaseResponseModel> Create (EmployeeInformationRequestModel model)
         {
             var user = await _unitOfWork.GetRepository<EmployeeInfo>().GetFirstOrDefaultAsync(predicate: x => x.EmployeeId == model.EmployeeId);
@@ -29,8 +32,9 @@ namespace Personnel.Service.Service
                 newuser.Id = Guid.NewGuid();               
                 newuser.FirstName = model.FirstName;
                 newuser.LastName = model.LastName;               
-                newuser.PhoneNumber = model.PhoneNumber;                
+                newuser.PhoneNumber = model.PhoneNumber;               
                 newuser.Email = model.Email;
+                newuser.CreatedBy = model.CreatedBy;
                 newuser.CreatedDate = DateTime.Now;
 
                 _unitOfWork.GetRepository<EmployeeInfo>().Insert(newuser);
