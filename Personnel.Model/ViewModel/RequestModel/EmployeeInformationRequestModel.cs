@@ -6,7 +6,7 @@ namespace Personnel.Model.ViewModel.RequestModel
 {
     public class EmployeeInformationRequestModel
     {
-        public int EmployeeId { get; set; }
+        public string EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }

@@ -1,0 +1,16 @@
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.deps.json
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.runtimeconfig.json
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.runtimeconfig.dev.json
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.pdb
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\Personnel.Model.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\bin\Debug\netcoreapp3.1\Personnel.Model.pdb
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.csproj.AssemblyReference.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.AssemblyInfoInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.AssemblyInfo.cs
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.csproj.CoreCompileInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.csproj.CopyComplete
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.pdb
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Migrations\obj\Debug\netcoreapp3.1\PersonnelSelfService.Migrations.genruntimeconfig.cache

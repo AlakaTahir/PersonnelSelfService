@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿  using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Personnel.Model.Entity;
 using Personnel.Model.ViewModel.RequestModel;
+using Personnel.Model.ViewModel.ResponseModel;
 using Personnel.Service.Interface;
+using Personnel.Service.Providers.JWT;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -18,13 +20,14 @@ namespace Personnel.Service.Service
         private readonly SignInManager<AppIdentityUser> _signInManager;
         private readonly IEmployeeService _employeeservice;
         private readonly IConfiguration _configuration;
-
-        public AuthService(UserManager<AppIdentityUser> userManager, IEmployeeService employeeservice, SignInManager<AppIdentityUser> signInManager, IConfiguration configuration)
+        private readonly IAuthTokenProvider _tokenProvider;
+        public AuthService(UserManager<AppIdentityUser> userManager, IEmployeeService employeeservice, SignInManager<AppIdentityUser> signInManager, IConfiguration configuration, IAuthTokenProvider tokenProvider)
         {
             _userManager = userManager;
             _employeeservice = employeeservice;
             _signInManager = signInManager;
             _configuration = configuration;
+            _tokenProvider = tokenProvider;
         }
 
         //How do we know the HR that creates an employee?
@@ -36,14 +39,14 @@ namespace Personnel.Service.Service
             {
                 return (false, "emloyee already exist, try another");
             }
-            var user = new AppIdentityUser { Email = email, UserName = employeeId, LastName = lastName, FirstName = firstName,  };
+            var user = new AppIdentityUser { Email = email, UserName = employeeId, LastName = lastName, FirstName = firstName, PhoneNumber = phonenumber };
 
             //Create user
             var result = await _userManager.CreateAsync(user, password);
             if (result.Succeeded)
             {
                 //save the domain user into the user table                  
-                var employeeModel = new EmployeeInformationRequestModel { FirstName = firstName, LastName = lastName, Email = email, CreatedDate = DateTime.Now,CreatedBy = createdby};
+                var employeeModel = new EmployeeInformationRequestModel { FirstName = firstName, LastName = lastName, Email = email, CreatedDate = DateTime.Now,CreatedBy = createdby, EmployeeId= employeeId, PhoneNumber= phonenumber};
 
                 var userdata = await _employeeservice.Create(employeeModel);
                 if (userdata.Status)
@@ -55,22 +58,31 @@ namespace Personnel.Service.Service
             }
             return (false, "Unable to complete the registration. Please try again");
         }
-        public async Task<(bool status, string message, string token, string refreshToken)> Login(string email, string password)
+        public async Task<(bool status, string message, string token, string refreshToken)> Login(string username, string password)
         {
-            var appUser = await _userManager.FindByNameAsync(email) ?? await _userManager.FindByEmailAsync(email);
+            var appUser = await _userManager.FindByNameAsync(username) ?? await _userManager.FindByEmailAsync(username);
             if (appUser != null)
             {
-                var signin = await _signInManager.PasswordSignInAsync(email, password, false, false);
+                var signin = await _signInManager.PasswordSignInAsync(username, password, false, false);
                 if (signin.Succeeded)
                 {
-                    var userdata = await _employeeservice.GetByEmployerIdOrEmail(email);
+                    var userdata = await _employeeservice.GetByEmployeeIdOrEmail(username);
                     if (userdata != null)
                     {
                         // TODO: Track all login history.                      
                         var refreshToken = _tokenProvider.GenerateRefreshToken();
                         var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["Jwt:RefreshExpireDays"]));
 
-                        var tokenModel = _mapper.Map<AuthTokenModel>(userdata);
+                        
+                        var tokenModel = new AuthTokenModel
+                        {
+                            Id = userdata.Id,
+                            Email = userdata.Email,
+                            EmployeeId = userdata.EmployeeId,
+                            FirstName = userdata.FirstName,
+                            LastName = userdata.LastName,
+                            UserName = username,
+                        };
 
                         ////add claims
                         var token = _tokenProvider.GenerateJwtToken(tokenModel, out List<Claim> claims);
@@ -89,5 +101,24 @@ namespace Personnel.Service.Service
             }
             return (false, "User not found, check and try again.", null, null);
         }
+        public async Task<string> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return "Logout Successful";
+        }
+        public async Task<BaseResponseModel> ChangePassword(string employeeid, string oldPassword, string newPassword)
+        {
+            var employee = await _userManager.FindByNameAsync(employeeid);
+            if (employee != null)
+            {
+                var change = await _userManager.ChangePasswordAsync(employee, oldPassword, newPassword);
+                if (change.Succeeded)
+                {
+                    return new BaseResponseModel() { Status = true, Message = "Password Change Successfull" };
+                }
+            }
+            return new BaseResponseModel() { Status = false, Message = "Operation Failed" };
+        }
+
     }
 }

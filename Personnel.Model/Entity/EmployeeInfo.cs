@@ -7,10 +7,9 @@ namespace Personnel.Model.Entity
     public class EmployeeInfo
     {
         public Guid Id { get; set; }
-        public int EmployeeId { get; set; }
+        public string EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string UserName { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string Department { get; set; }
@@ -26,9 +25,9 @@ namespace Personnel.Model.Entity
         public string Dependant { get; set; }
         public string PreviousEmployment { get; set; }
         public string LineManager { get; set; }
-        public string AccessType { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }

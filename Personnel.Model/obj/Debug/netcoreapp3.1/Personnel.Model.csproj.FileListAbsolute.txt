@@ -1,0 +1,10 @@
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\bin\Debug\netcoreapp3.1\Personnel.Model.deps.json
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\bin\Debug\netcoreapp3.1\Personnel.Model.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\bin\Debug\netcoreapp3.1\Personnel.Model.pdb
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.csproj.AssemblyReference.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.AssemblyInfoInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.AssemblyInfo.cs
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.csproj.CoreCompileInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\Personnel.Model\obj\Debug\netcoreapp3.1\Personnel.Model.pdb

@@ -1,0 +1,109 @@
+﻿@model PersonnelService.WEB.Models.LoanDashboardModel
+@{
+    ViewData["Title"] = "Loan";
+    Layout = "~/Views/Shared/ApplicationLayout.cshtml";
+}
+<div class="content container-fluid">
+
+	<!-- Page Header -->
+	<div class="page-header">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="page-title">Payments</h3>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+					<li class="breadcrumb-item active">Payments</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- /Page Header -->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Pending Loan</h6>
+				<h4>12 / 60</h4>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Approved Loan</h6>
+				<h4>8 <span>Today</span></h4>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Ongoing Loan</h6>
+				<h4>12</h4>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Completed Loan</h6>
+				<h4>12</h4>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Rejected Loan</h6>
+				<h4>12</h4>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="stats-info">
+				<h6>Overdue Loan</h6>
+				<h4>12</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive">
+				<table class="table table-striped custom-table datatable mb-0">
+					<thead>
+						<tr>
+							<th>Amount Requested</th>
+							<th>Start Date</th>
+							<th>No Of Installment</th>
+							<th>End Date</th>
+							<th>Interest Rate</th>
+							<th>Amount Approved</th>
+							<th>Approved Date </th>
+							<th>Start Date</th>
+							<th>Installment Amount</th>
+							<th>Reason</th>
+							<th>Approved By</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.LoanRecord)
+						{
+							<tr>
+								<td>@item.AmountRequested</td>
+								<td>@item.StartDate</td>
+								<td>@item.NoOfInstallment</td>
+								<td>@item.EndDate</td>
+								<td>@item.InterestRate</td>
+								<td>@item.AmountApproved</td>
+								<td>@item.ApprovedDate</td>
+								<td>@item.StartDate</td>
+								<td>@item.InstallmentAmount</td>
+								<td>@item.Reason</td>
+								<td>@item.ApprovedBy</td>
+								<td>@item.Status</td>
+								
+							</tr>
+							
+						}
+												
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

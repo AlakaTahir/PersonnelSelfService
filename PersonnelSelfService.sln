@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personnel.Model", "Personne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personnel.Service", "Personnel.Service\Personnel.Service.csproj", "{3F49D9D6-93BB-4D2A-A791-3BFC6B3EA823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSelfService.API", "PersonnelSelfService.API\PersonnelSelfService.API.csproj", "{E297DD1C-6B50-4A8F-9228-B50F06018167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSelfService.API", "PersonnelSelfService.API\PersonnelSelfService.API.csproj", "{E297DD1C-6B50-4A8F-9228-B50F06018167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSelfService.Migrations", "PersonnelSelfService.Migrations\PersonnelSelfService.Migrations.csproj", "{FCE8FEDE-5D24-497B-8544-9E30148D8162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSelfService.Migrations", "PersonnelSelfService.Migrations\PersonnelSelfService.Migrations.csproj", "{FCE8FEDE-5D24-497B-8544-9E30148D8162}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelService.WEB", "PersonnelService.WEB\PersonnelService.WEB.csproj", "{1BE861E8-A411-4C5B-9A14-9512FEB0E943}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE8FEDE-5D24-497B-8544-9E30148D8162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

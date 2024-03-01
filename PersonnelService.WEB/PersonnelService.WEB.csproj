@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Personnel.Service\Personnel.Service.csproj" />
+    <ProjectReference Include="..\PersonnelSelfService.Migrations\PersonnelSelfService.Migrations.csproj" />
+  </ItemGroup>
+
+</Project>
