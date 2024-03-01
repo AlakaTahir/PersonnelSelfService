@@ -21,5 +21,7 @@ namespace Personnel.Service.Interface
         Task<int> CompletedLeaveCount();
         Task<int> RejectedLeaveCount();
 
+        Task<string> GenerateData();
+
 	}
 }

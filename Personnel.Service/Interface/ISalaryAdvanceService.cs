@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Personnel.Service.Interface
 {
-	internal class ISalaryAdvanceService
+	public interface ISalaryAdvanceService
 	{
 	}
 }

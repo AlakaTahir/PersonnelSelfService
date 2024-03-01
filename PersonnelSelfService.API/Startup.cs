@@ -15,6 +15,9 @@ using Personnel.Model.Entity;
 using Personnel.Service.Providers.JWT;
 using AutoMapper;
 using Personnel.Service.Mapping;
+using PersonnelSelfService.API.Invocables;
+using Coravel;
+using Personnel.Service.Providers.Termii;
 
 namespace PersonnelSelfService.API
 {
@@ -48,10 +51,12 @@ namespace PersonnelSelfService.API
             services.AddTransient<IAuthTokenProvider, AuthTokenProvider>();
             services.AddTransient<ILoanService, LoanService>();
             services.AddTransient<ILeaveService, LeaveService>();
-            services.AddDbContext<PersonnelDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))).AddUnitOfWork<PersonnelDatabaseContext>();
+			services.AddDbContext<PersonnelDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))).AddUnitOfWork<PersonnelDatabaseContext>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
 
-            services.AddSwaggerGen(c =>
+			services.AddHttpClient<ITermiiProvider, TermiiProvider>();
+
+			services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
@@ -73,7 +78,10 @@ namespace PersonnelSelfService.API
                 });
             });
 
-        }
+            services.AddTransient<HelloInvocable>();
+            services.AddScheduler();
+
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,6 +110,11 @@ namespace PersonnelSelfService.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.ApplicationServices.UseScheduler(scheduler =>
+            {
+                scheduler.Schedule<HelloInvocable>().EveryMinute();
             });
         }
     }

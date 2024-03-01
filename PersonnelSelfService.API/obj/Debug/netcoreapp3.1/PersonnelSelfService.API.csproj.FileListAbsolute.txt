@@ -83,3 +83,4 @@ C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfSer
 C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.API\obj\Debug\netcoreapp3.1\PersonnelSelfService.API.genruntimeconfig.cache
 C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.API\bin\Debug\netcoreapp3.1\Coravel.dll

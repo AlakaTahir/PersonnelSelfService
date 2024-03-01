@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IhzDs3zRywVry8zuIZxqTOEdAlQB/0jx8faakVvBajb9SoIQ9iIPiy4UbnSlkL5jkDc/b/Q/OoD2hTtJJVdlsw==",
+  "dgSpecHash": "KlsrUonhtYgzBDCCeJ9sNcfY3havZkNefiYmbn/dgnX8/X4cRycW1R4oAPiJxzfZu7jKLwM9yLDo2YAsPB8nng==",
   "success": true,
   "projectFilePath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.API\\PersonnelSelfService.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CORE I5\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\CORE I5\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\CORE I5\\.nuget\\packages\\coravel\\3.6.1\\coravel.3.6.1.nupkg.sha512",
     "C:\\Users\\CORE I5\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\CORE I5\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\CORE I5\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

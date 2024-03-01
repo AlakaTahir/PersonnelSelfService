@@ -254,5 +254,10 @@ namespace Personnel.Service.Service
 
         }
 
+        public async Task<string> GenerateData()
+        {
+            return "Hello";
+        }
+
     }
 }
