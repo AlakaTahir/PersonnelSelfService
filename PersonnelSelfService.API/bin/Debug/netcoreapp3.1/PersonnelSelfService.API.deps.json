@@ -37,6 +37,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.32",
           "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
           "Personnel.Service": "1.0.0",
+          "PersonnelSelfService.Core": "1.0.0",
           "PersonnelSelfService.Migrations": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1681,6 +1682,14 @@
         },
         "compile": {
           "Personnel.Service.dll": {}
+        }
+      },
+      "PersonnelSelfService.Core/1.0.0": {
+        "runtime": {
+          "PersonnelSelfService.Core.dll": {}
+        },
+        "compile": {
+          "PersonnelSelfService.Core.dll": {}
         }
       },
       "PersonnelSelfService.Migrations/1.0.0": {
@@ -4237,6 +4246,11 @@
       "sha512": ""
     },
     "Personnel.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelSelfService.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

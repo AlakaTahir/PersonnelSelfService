@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Personnel.Model.ViewModel.RequestModel;
 using Personnel.Service.Interface;
 using Personnel.Service.Service;
+using PersonnelSelfService.Core;
 using System.Threading.Tasks;
 
 namespace PersonnelSelfService.API.Controllers
@@ -12,17 +13,19 @@ namespace PersonnelSelfService.API.Controllers
     public class AuthServiceController : ControllerBase
     {
         private readonly IAuthService _authService;
-        public AuthServiceController(IAuthService authService)
-        {
-            _authService = authService;
-        }
+        private readonly IUtility _utility;
+		public AuthServiceController(IAuthService authService, IUtility utility)
+		{
+			_authService = authService;
+			_utility = utility;
+		}
 
-        /// <summary>
-        /// "From body" means, converting the request to Json format
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        [HttpPost("Create")]
+		/// <summary>
+		/// "From body" means, converting the request to Json format
+		/// </summary>
+		/// <param name="model"></param>
+		/// <returns></returns>
+		[HttpPost("Create")]
 
         public async Task<IActionResult> Register([FromBody] CreateRequestViewModel model)
         {
@@ -39,6 +42,7 @@ namespace PersonnelSelfService.API.Controllers
 
         public async Task<IActionResult> Login(string username, string password)
         {
+            _utility.Log($"{username} is about to login", "Update");
             (bool status, string message, string token, string refreshToken) = await _authService.Login(username,password);
             return Ok(new
             {

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSelfService.Migrat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelService.WEB", "PersonnelService.WEB\PersonnelService.WEB.csproj", "{1BE861E8-A411-4C5B-9A14-9512FEB0E943}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSelfService.Core", "PersonnelSelfService.Core\PersonnelSelfService.Core.csproj", "{B281221E-25A9-49A2-9AEE-7723FDCD2356}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BE861E8-A411-4C5B-9A14-9512FEB0E943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B281221E-25A9-49A2-9AEE-7723FDCD2356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B281221E-25A9-49A2-9AEE-7723FDCD2356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B281221E-25A9-49A2-9AEE-7723FDCD2356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B281221E-25A9-49A2-9AEE-7723FDCD2356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

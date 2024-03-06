@@ -28,6 +28,9 @@ namespace Personnel.Model.Entity
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public bool IsActive { get; set; }
+        public int MonthsWorked { get; set; }
+        public int Salary { get; set; }
 
-    }
+
+	}
 }

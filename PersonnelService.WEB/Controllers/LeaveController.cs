@@ -3,7 +3,9 @@ using Personnel.Model.Enumeration;
 using Personnel.Service.Interface;
 using PersonnelService.WEB.Models;
 using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Personnel.Model.ViewModel.RequestModel;
+using System;
+using System.Globalization;
 
 namespace PersonnelService.WEB.Controllers
 {
@@ -37,8 +39,19 @@ namespace PersonnelService.WEB.Controllers
 			return View(leaveDashboard);
 		}
 		[HttpPost]
-		public async Task<IActionResult> ApplyLeave(string leaveTypeId, string dateFrom,string dateTo, int noOfDays, int remainigDays,string leaveReason)
+		public async Task<IActionResult> ApplyLeave(int leaveTypeId, string dateFrom,string dateTo, int noOfDays, int remainigDays,string leaveReason)
 		{
+			var model = new LeaveApplicationRequestModel
+			{
+				EmployeeId = "seyi001",
+				LeaveType = (LeaveType)leaveTypeId,
+				DateFrom = DateTime.ParseExact(dateFrom, "yyyy-MM-dd HH:mm:ss,fff", CultureInfo.InvariantCulture),
+				NoOfDaysAppliedFor = noOfDays,
+				Description = leaveReason,
+				BonusAmount = 10000
+			};
+
+			var leaveResponse = _leaveService.Create(model);
 			return Ok(new
 			{
 				status = true,

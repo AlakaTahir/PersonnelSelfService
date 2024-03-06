@@ -1,0 +1,10 @@
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\bin\Debug\netcoreapp3.1\PersonnelSelfService.Core.deps.json
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\bin\Debug\netcoreapp3.1\PersonnelSelfService.Core.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\bin\Debug\netcoreapp3.1\PersonnelSelfService.Core.pdb
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.csproj.AssemblyReference.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.AssemblyInfoInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.AssemblyInfo.cs
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.csproj.CoreCompileInputs.cache
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.dll
+C:\Users\CORE I5\Documents\Dotnet Projects\PersonnelSelfService\PersonnelSelfService.Core\obj\Debug\netcoreapp3.1\PersonnelSelfService.Core.pdb

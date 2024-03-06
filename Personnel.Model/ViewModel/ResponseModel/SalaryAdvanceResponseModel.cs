@@ -9,7 +9,8 @@ namespace Personnel.Model.ViewModel.ResponseModel
 		public decimal AdvanceAmount { get; set; }
 		public DateTime IssueDate { get; set; }
 		public DateTime CreatedDate { get; set; }
-		public bool IsPaid { get; set; }
+		public string Reason { get; set; }
+		
 
 	}
 }

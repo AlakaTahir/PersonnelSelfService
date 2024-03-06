@@ -18,6 +18,7 @@ using Personnel.Service.Mapping;
 using PersonnelSelfService.API.Invocables;
 using Coravel;
 using Personnel.Service.Providers.Termii;
+using PersonnelSelfService.Core;
 
 namespace PersonnelSelfService.API
 {
@@ -50,7 +51,8 @@ namespace PersonnelSelfService.API
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IAuthTokenProvider, AuthTokenProvider>();
             services.AddTransient<ILoanService, LoanService>();
-            services.AddTransient<ILeaveService, LeaveService>();
+			services.AddTransient<ISalaryAdvanceService, SalaryAdvanceService>();
+			services.AddTransient<IUtility, Utility>();
 			services.AddDbContext<PersonnelDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))).AddUnitOfWork<PersonnelDatabaseContext>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
 

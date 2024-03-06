@@ -2261,6 +2261,16 @@
           "bin/placeholder/Personnel.Service.dll": {}
         }
       },
+      "PersonnelSelfService.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/PersonnelSelfService.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelSelfService.Core.dll": {}
+        }
+      },
       "PersonnelSelfService.Migrations/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -6828,6 +6838,11 @@
       "path": "../Personnel.Service/Personnel.Service.csproj",
       "msbuildProject": "../Personnel.Service/Personnel.Service.csproj"
     },
+    "PersonnelSelfService.Core/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelSelfService.Core/PersonnelSelfService.Core.csproj",
+      "msbuildProject": "../PersonnelSelfService.Core/PersonnelSelfService.Core.csproj"
+    },
     "PersonnelSelfService.Migrations/1.0.0": {
       "type": "project",
       "path": "../PersonnelSelfService.Migrations/PersonnelSelfService.Migrations.csproj",
@@ -6842,6 +6857,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.32",
       "Microsoft.EntityFrameworkCore.UnitOfWork >= 3.1.0",
       "Personnel.Service >= 1.0.0",
+      "PersonnelSelfService.Core >= 1.0.0",
       "PersonnelSelfService.Migrations >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -6882,6 +6898,9 @@
           "projectReferences": {
             "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\Personnel.Service\\Personnel.Service.csproj": {
               "projectPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\Personnel.Service\\Personnel.Service.csproj"
+            },
+            "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Core\\PersonnelSelfService.Core.csproj": {
+              "projectPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Core\\PersonnelSelfService.Core.csproj"
             },
             "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj": {
               "projectPath": "C:\\Users\\CORE I5\\Documents\\Dotnet Projects\\PersonnelSelfService\\PersonnelSelfService.Migrations\\PersonnelSelfService.Migrations.csproj"

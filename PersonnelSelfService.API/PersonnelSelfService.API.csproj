@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Personnel.Service\Personnel.Service.csproj" />
+    <ProjectReference Include="..\PersonnelSelfService.Core\PersonnelSelfService.Core.csproj" />
     <ProjectReference Include="..\PersonnelSelfService.Migrations\PersonnelSelfService.Migrations.csproj" />
   </ItemGroup>
 
